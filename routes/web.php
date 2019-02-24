@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
+
+
+/*  poner en mayusculas el nombre del controlador, si  no sale un error */
+Route::get('/', ['as'=>'Home','uses'=>'Home@index']);
+
+Route::get('/home', ['as'=>'Home','uses'=>'Home@index']);
+
+Route::get('/dashboard', ['as'=>'Dashboard','uses'=>'Users@dashboard']);
+
